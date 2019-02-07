@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+           version="3.1">
+    <servlet>
+        <servlet-name>LoginHandler</servlet-name>
+        <servlet-class>ravindra.avs_provisioning.LWAHandlerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginHandler</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>callbackfunction</servlet-name>
+        <servlet-class>ravindra.avs_provisioning.callbackHandlerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>callbackfunction</servlet-name>
+        <url-pattern>/callbackfunction</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DisplayImage</servlet-name>
+        <servlet-class>ravindra.avs_provisioning.ImageHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DisplayImage</servlet-name>
+        <url-pattern>/images/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DisplayHTML1</servlet-name>
+        <servlet-class>ravindra.avs_provisioning.HTMLHandlerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DisplayHTML1</servlet-name>
+        <url-pattern>/static/*</url-pattern>
+    </servlet-mapping>
+</web-app>
